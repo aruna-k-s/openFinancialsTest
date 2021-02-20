@@ -1,0 +1,438 @@
+@import "../assets/shared-css.scss";
+
+.logo {
+  background: url("../assets/images/logo@2x.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 123px;
+  height: 123px;
+  transition: 0.25s;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  transition: 0.25s;
+  width: calc(100% - 240px);
+  left: 0px;
+  z-index: 12;
+}
+
+.shrink-nav-bar {
+  top: -10px;
+  background: #ffffff !important;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.15) !important;
+}
+
+.shrink-nav-bar > .logo {
+  width: 100px;
+  height: 100px;
+}
+
+.page-container {
+  height: 100%;
+}
+
+.p-120px {
+  padding: 120px;
+}
+
+.nav-item {
+  padding: 0px 25px;
+  font-size: 25px;
+  @include _open-sans;
+  color: $font-color;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  color: #9f62c9;
+}
+
+.btn {
+  font-size: 16px !important;
+  @include _montserrat;
+  border: 1px solid $primary-color;
+  border-radius: 24px;
+  outline: none !important;
+  padding: 12px;
+  margin-left: 30px;
+  cursor: pointer;
+  width: 166px;
+}
+
+.login {
+  color: $primary-color;
+  background: transparent !important;
+}
+
+.login:hover {
+  color: #ffffff;
+  background: $primary-color !important;
+}
+
+.get-started {
+  background-image: linear-gradient(to right, #9f62c9, $primary-color);
+  color: #ffffff;
+}
+
+.get-started:hover {
+  background-image: linear-gradient(to right, $primary-color, $primary-color) !important;
+}
+
+.connect-image {
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  right: 8px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: -8px;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: $primary-color;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $primary-color;
+}
+
+input:checked + .slider:before {
+  transform: translateX(25px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.top-60 {
+  top: 60px;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.make-it-super {
+  width: 50%;
+  padding-right: 20px;
+}
+
+.text-container {
+  @include _montserrat;
+  font-size: 40px;
+  font-weight: 400;
+  color: #222222;
+  padding: 20px;
+  width: 75%;
+  line-height: 40px;
+}
+
+.under-line {
+  border: 5px solid #000000;
+  width: 40%;
+  margin-left: 0px;
+  border-radius: 20px;
+  background: #000000;
+}
+
+.eligibility-criteria {
+  width: 50%;
+}
+
+.calc {
+  box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 10%);
+  border-radius: 20px;
+  width: 70%;
+  background: #ffffff;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.calc-header {
+  text-align: center;
+  font-family: "Montserrat";
+  background: #fafbfd;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.ltr-spacing{
+  letter-spacing: .45px;
+}
+
+.range-item {
+  @include _montserrat;
+}
+
+::ng-deep .mat-slider-horizontal {
+  height: 30px !important;
+}
+
+::ng-deep .mat-slider.mat-slider-horizontal .mat-slider-wrapper {
+  top: 10px;
+}
+::ng-deep .mat-slider.mat-slider-horizontal .mat-slider-track-wrapper {
+  height: 8px;
+  border-radius: 10px;
+  background-color: #f3eef7;
+}
+
+::ng-deep .mat-slider-min-value:not(.mat-slider-thumb-label-showing) .mat-slider-thumb {
+  background-color: $primary-color !important;
+}
+::ng-deep .mat-slider.mat-slider-horizontal .mat-slider-track-fill {
+  background-color: $primary-color;
+  height: 10px;
+}
+::ng-deep .mat-slider-track-background {
+  background-color: transparent !important;
+}
+::ng-deep .mat-slider-thumb {
+  bottom: -12px !important;
+  border: 4px solid white !important;
+}
+
+.drop-down {
+  @include _montserrat;
+}
+
+.select {
+  @include _montserrat;
+  outline: none !important;
+  border: 0px;
+  border-bottom: 1px solid #222222;
+  padding: 10px 5px;
+}
+
+.switch-label {
+  @include _montserrat;
+}
+.emi-label {
+  @include _montserrat;
+}
+.emi {
+  @include _montserrat;
+  border-bottom: 1px solid #222222;
+}
+.emi > input {
+  @include _montserrat;
+  border: none;
+  outline: none;
+}
+
+.loan-amount {
+  @include _montserrat;
+  height: 50% !important;
+  color: #ffff;
+  margin-left: 10px;
+  padding: 40px 10px;
+  border-radius: 0px 20px 20px 0px;
+  background: $primary-color;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25);
+}
+
+.loan-label {
+  text-align: center;
+  padding: 20px 10px;
+}
+.getMoney {
+  margin: 0px ;
+  color: #663399;
+  text-transform: uppercase;
+  background: white;
+}
+.getMoney:hover {
+  color: white;
+  background: #482270  ;
+}
+.dim-color {
+  color: $light-primary;
+  letter-spacing: 0.5px;
+}
+
+.business-content {
+  height: 850px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.business-card {
+  padding: 34px;
+  width: 250px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin: 20px 20px 0px 0px;
+}
+.business-card:hover {
+  background: #bb9ed3;
+}
+.business-card:hover > .business-header {
+  color: #ffffff;
+}
+.business-card:hover > .business-font {
+  color: #f6fbff;
+}
+
+.business-header {
+  @include _montserrat;
+  color: $business-card-font--header-color;
+}
+.business-header:hover{
+  color: #00000033 !important;
+  font-weight: 500 !important;
+}
+.business-font {
+  @include _montserrat;
+  color: $business-card-font-color ;
+}
+
+.business-font:hover{
+  color: #00000033 !important;
+  font-weight: 500 !important;
+}
+.business-logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.quick-cash {
+  background-image: url("../assets/images/Get\ Paid\ Instantly.png");
+}
+.low-intr {
+  background-image: url("../assets/images/Low\ interest\ rate.png");
+}
+.secure-payment {
+  background-image: url("../assets/images/securePayment.png");
+}
+.free-lancer {
+  background-image: url("../assets/images/freelancer_feature_icon_6@1.5x.png");
+}
+.covid {
+  background-image: url("../assets/images/Covid.png");
+}
+.connect-image{
+  background-image: url('../assets/images/collect_img-video.png');
+  width: 100%;
+  height: 70%;
+  background-size: contain;
+  background-position: 0px 0px ;
+  background-repeat: no-repeat;
+}
+.wave-background {
+  background-image: url("../assets/images/sol_wave_bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 225px;
+}
+.boost-text {
+  @include _montserrat;
+  color: #777777;
+  line-height: 25px;
+}
+.gray-color-hr {
+  background: #707070;
+  border: 4px solid #707070;
+  width: 40%;
+}
+.open-acc-btn {
+  margin-top: 30px;
+  margin-left: 20px;
+  background-color: transparent;
+  width: auto !important;
+  padding: 10px 20px;
+  color: #6c389e;
+}
+.open-acc-btn:hover {
+  color: #ffffff;
+  background: $primary-color !important;
+}
+.background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+.small-circle {
+  background-image: url("../assets/images/blob-small.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30%;
+  height: 60%;
+  position: relative;
+  top: 20%;
+  left: -8%;
+}
+.large-circle {
+  background-image: url('../assets/images/circle.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 32%;
+  height: 100%;
+  transform: scale(2);
+  position: absolute;
+  top: -37%;
+  right: 5%;
+}
+.acnt-dots1 {
+  position: absolute;
+  bottom: 10%;
+  left: 26%;
+}
+
+.acnt-dots2 {
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+}
