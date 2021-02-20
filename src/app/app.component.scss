@@ -201,8 +201,8 @@ input:checked + .slider:before {
   border-top-right-radius: 20px;
 }
 
-.ltr-spacing{
-  letter-spacing: .45px;
+.ltr-spacing {
+  letter-spacing: 0.45px;
 }
 
 .range-item {
@@ -281,14 +281,14 @@ input:checked + .slider:before {
   padding: 20px 10px;
 }
 .getMoney {
-  margin: 0px ;
+  margin: 0px;
   color: #663399;
   text-transform: uppercase;
   background: white;
 }
 .getMoney:hover {
   color: white;
-  background: #482270  ;
+  background: #482270;
 }
 .dim-color {
   color: $light-primary;
@@ -299,6 +299,11 @@ input:checked + .slider:before {
   height: 850px;
   flex-wrap: wrap;
   justify-content: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .business-card {
@@ -322,16 +327,16 @@ input:checked + .slider:before {
   @include _montserrat;
   color: $business-card-font--header-color;
 }
-.business-header:hover{
+.business-header:hover {
   color: #00000033 !important;
   font-weight: 500 !important;
 }
 .business-font {
   @include _montserrat;
-  color: $business-card-font-color ;
+  color: $business-card-font-color;
 }
 
-.business-font:hover{
+.business-font:hover {
   color: #00000033 !important;
   font-weight: 500 !important;
 }
@@ -358,12 +363,12 @@ input:checked + .slider:before {
 .covid {
   background-image: url("../assets/images/Covid.png");
 }
-.connect-image{
-  background-image: url('../assets/images/collect_img-video.png');
+.connect-image {
+  background-image: url("../assets/images/collect_img-video.png");
   width: 100%;
   height: 70%;
   background-size: contain;
-  background-position: 0px 0px ;
+  background-position: 0px 0px;
   background-repeat: no-repeat;
 }
 .wave-background {
@@ -414,7 +419,7 @@ input:checked + .slider:before {
   left: -8%;
 }
 .large-circle {
-  background-image: url('../assets/images/circle.svg');
+  background-image: url("../assets/images/circle.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
