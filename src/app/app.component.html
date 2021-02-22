@@ -1,169 +1,166 @@
 <div class="page-container">
-  <div class="nav-bar " style="padding: 0px 120px;" [class.shrink-nav-bar]="applyClassToNavBar">
-    <div class="logo">
-    </div>
+    <div class="nav-bar " style="padding: 0px 120px;" [class.shrink-nav-bar]="applyClassToNavBar">
+        <div class="logo">
+        </div>
 
-    <span class="_ml-auto nav-item">
+        <span class="_ml-auto nav-item">
       Products
     </span>
-    <span class="nav-item">
+        <span class="nav-item">
       Solutions
     </span>
-    <span class="nav-item">
+        <span class="nav-item">
       Pricing
     </span>
 
-    <button class="btn login">
+        <button class="btn login">
       Login
     </button>
-    <button class="btn get-started">
+        <button class="btn get-started">
       Get Started
     </button>
-  </div>
-
-  <div class="p-120px  position-relative">
-    <div class="background-image">
-      <div class="small-circle"></div>
-      <div class="large-circle"></div>
-      <!-- <img src="../assets/images/circle.svg" alt="" class="large-circle"> -->
-      <img src="../assets/images/accounting_dots.svg" alt="" class="acnt-dots1">
-      <img src="../assets/images/accounting_dots.svg" alt="" class="acnt-dots2">
     </div>
-    <div class="_flex-box top-60 position-relative" style="align-items: stretch;">
-      <div class="make-it-super">
-        <div class="text-container">
-          <div>We make it Super <br> Simple </div>
-          <hr class="under-line">
+
+    <div class="p-120px  position-relative">
+        <div class="background-image">
+            <div class="small-circle"></div>
+            <div class="large-circle"></div>
+            <!-- <img src="../assets/images/circle.svg" alt="" class="large-circle"> -->
+            <img src="../assets/images/accounting_dots.svg" alt="" class="acnt-dots1">
+            <img src="../assets/images/accounting_dots.svg" alt="" class="acnt-dots2">
         </div>
-        <!-- <img src="../assets/images/collect_img-video.png" alt="none" class="connect-image"> -->
-        <div class="connect-image"></div>
-      </div>
-
-      <div class="eligibility-criteria _flex-box">
-        <form class="calc _ml-auto _pb-10">
-          <div class="p-20 calc-header _f-22 _semi-bold ">Eligibility Calculator</div>
-
-          <div class=" p-20 range-item">
-            <span class="_semi-bold _p-5 _f-15">Monthly Income</span>
-            <div class="_semi-bold _p-5 _f-25">&#8377; {{monthlyIncome}}</div>
-            <!-- <input type="range" name="monthlyIncome" class="_w-100 range " id="monthlyIncome" [min]="100000" [max]="300000"
-              [formControl]="monthlyIncome"> -->
-            <mat-slider [min]="100000" [max]="300000" [color]="'primary'" class="_w-100 range"
-              (input)="updateValue($event)"></mat-slider>
-            <div class="_flex-box _semi-bold _p-5 _f-14 " style="color: #00000063;">
-              <span>Min : 100000</span>
-              <span class="_ml-auto">Max : 300000</span>
+        <div class="_flex-box top-60 position-relative" style="align-items: stretch;">
+            <div class="make-it-super">
+                <div class="text-container">
+                    <div>We make it Super <br> Simple </div>
+                    <hr class="under-line">
+                </div>
+                <!-- <img src="../assets/images/collect_img-video.png" alt="none" class="connect-image"> -->
+                <div class="connect-image"></div>
             </div>
-          </div>
 
-          <div class="p-20 range-item">
-            <span class="_semi-bold _p-5 _f-15">Monthly Expense</span>
-            <div class="_semi-bold _p-5 _f-25">&#8377; {{monthlyExpense}}</div>
-            <!-- <input type="range" name="monthlyIncome" id="monthlyIncome"  class="_w-100 range" [min]="0" [max]="100000"
+            <div class="eligibility-criteria _flex-box">
+                <form class="calc _ml-auto _pb-10">
+                    <div class="p-20 calc-header _f-22 _semi-bold ">Eligibility Calculator</div>
+
+                    <div class=" p-20 range-item">
+                        <span class="_semi-bold _p-5 _f-15">Monthly Income</span>
+                        <div class="_semi-bold _p-5 _f-25">&#8377; {{monthlyIncome}}</div>
+                        <!-- <input type="range" name="monthlyIncome" class="_w-100 range " id="monthlyIncome" [min]="100000" [max]="300000"
+              [formControl]="monthlyIncome"> -->
+                        <mat-slider [min]="100000" [max]="300000" [color]="'primary'" class="_w-100 range" (input)="updateValue($event)"></mat-slider>
+                        <div class="_flex-box _semi-bold _p-5 _f-14 " style="color: #00000063;">
+                            <span>Min : 100000</span>
+                            <span class="_ml-auto">Max : 300000</span>
+                        </div>
+                    </div>
+
+                    <div class="p-20 range-item">
+                        <span class="_semi-bold _p-5 _f-15">Monthly Expense</span>
+                        <div class="_semi-bold _p-5 _f-25">&#8377; {{monthlyExpense}}</div>
+                        <!-- <input type="range" name="monthlyIncome" id="monthlyIncome"  class="_w-100 range" [min]="0" [max]="100000"
               [formControl]="monthlyExpense"> -->
 
-            <mat-slider [min]="10000" [max]="100000" [color]="'primary'" class="_w-100 range"
-              (input)="updateValueMonthlyExp($event);"></mat-slider>
-          </div>
+                        <mat-slider [min]="10000" [max]="100000" [color]="'primary'" class="_w-100 range" (input)="updateValueMonthlyExp($event);"></mat-slider>
+                    </div>
 
-          <div class="p-20 drop-down">
-            <div class="_semi-bold _p-5 _f-15">Repayment Teure</div>
-            <select name="repayment" class="select _w-100 _semi-bold _f-25" [formControl]="rePayment">
+                    <div class="p-20 drop-down">
+                        <div class="_semi-bold _p-5 _f-15">Repayment Teure</div>
+                        <select name="repayment" class="select _w-100 _semi-bold _f-25" [formControl]="rePayment">
               <option [value]="6">6 Months</option>
               <option [value]="9">9 Months</option>
               <option [value]="12">12 Months</option>
               <option [value]="18">18 Months</option>
             </select>
-          </div>
+                    </div>
 
-          <div class="p-20 _flex-box">
-            <span class="_semi-bold _p-5 _f-15 switch-label"> Do you have any existing loans? </span>
-            <label class="switch _ml-auto">
+                    <div class="p-20 _flex-box">
+                        <span class="_semi-bold _p-5 _f-15 switch-label"> Do you have any existing loans? </span>
+                        <label class="switch _ml-auto">
               <input type="checkbox">
               <span class="slider round"></span>
             </label>
-          </div>
+                    </div>
 
-          <div class="p-20">
-            <div class="_semi-bold _p-5 _f-15 emi-label">EMI of existing loan (optional)</div>
-            <div class="emi _f-25 _semi-bold _w-100 _p-5 _flex-box">
-              &#8377;<input type="number" class="_w-100" [placeholder]="'15000'" class="_semi-bold _f-25" >
+                    <div class="p-20">
+                        <div class="_semi-bold _p-5 _f-15 emi-label">EMI of existing loan (optional)</div>
+                        <div class="emi _f-25 _semi-bold _w-100 _p-5 _flex-box">
+                            &#8377;<input type="number" class="_w-100" [placeholder]="'15000'" class="_semi-bold _f-25">
+                        </div>
+
+                    </div>
+
+                </form>
+
+
+                <div class="_flex-box _flex-column-direction loan-amount">
+                    <div class="loan-label _w-100 _mt-20">
+                        <div class="_f-15 _regular dim-color">Loan Amount</div>
+                        <div class="_f-25 _semi-bold ltr-spacing">&#8377;100000</div>
+                    </div>
+                    <div class="loan-label _w-100">
+                        <div class="_f-15 _regular dim-color">Your EMI will be</div>
+                        <div class="_f-25 _semi-bold ltr-spacing">&#8377;15000</div>
+                    </div>
+                    <div class="_p-20 _mb-20">
+                        <button class="btn getMoney _f-15 _regular "> Get Money</button>
+                    </div>
+                </div>
+
             </div>
 
-          </div>
-
-        </form>
-
-
-        <div class="_flex-box _flex-column-direction loan-amount">
-          <div class="loan-label _w-100 _mt-20">
-            <div class="_f-15 _regular dim-color">Loan Amount</div>
-            <div class="_f-25 _semi-bold ltr-spacing">&#8377;100000</div>
-          </div>
-          <div class="loan-label _w-100">
-            <div class="_f-15 _regular dim-color">Your EMI will be</div>
-            <div class="_f-25 _semi-bold ltr-spacing">&#8377;15000</div>
-          </div>
-          <div class="_p-20 _mb-20">
-            <button class="btn getMoney _f-15 _regular "> Get Money</button>
-          </div>
         </div>
-
-      </div>
 
     </div>
 
-  </div>
 
+    <div class="p-120px position-relative _flex-box wave-background">
+        <div class="_flex-box _flex-column-direction business-content">
+            <div class="business-card _flex-box _flex-column-direction _align-items-unset">
+                <div class="business-logo quick-cash "></div>
+                <div class="business-header _f-15 _pt-5 _pb-5 _semi-bold">Quick cash disbursement</div>
+                <div class="_f-15 business-font _regular">Get terms loans that your business needs within 72 hrs</div>
+            </div>
 
-  <div class="p-120px position-relative _flex-box wave-background">
-    <div class="_flex-box _w-50 _flex-column-direction business-content">
-      <div class="business-card _flex-box _flex-column-direction _align-items-unset">
-        <div class="business-logo quick-cash "></div>
-        <div class="business-header _f-15 _pt-5 _pb-5 _semi-bold">Quick cash disbursement</div>
-        <div class="_f-15 business-font _regular">Get terms loans that your business needs within 72 hrs</div>
-      </div>
+            <div class="business-card _flex-box _flex-column-direction _align-items-unset">
+                <div class="business-logo low-intr "></div>
+                <div class="business-header _f-15 _pt-5 _pb-5 _semi-bold">Low-interest rate</div>
+                <div class="_f-15 business-font _regular">Achieve your financial goals with an amazing interest rate starting at 13% per annum</div>
+            </div>
 
-      <div class="business-card _flex-box _flex-column-direction _align-items-unset">
-        <div class="business-logo low-intr "></div>
-        <div class="business-header _f-15 _pt-5 _pb-5 _semi-bold">Low-interest rate</div>
-        <div class="_f-15 business-font _regular">Achieve your financial goals with an amazing interest rate starting at
-          13% per annum</div>
-      </div>
+            <div class="business-card _flex-box _flex-column-direction _align-items-unset">
+                <div class="business-logo secure-payment"></div>
+                <div class="business-header _f-15 _pt-5 _pb-5 _semi-bold">Zero Paperwork</div>
+                <div class="_f-15 business-font _regular">Get started instantly by submitting only your basic details & bank statements
+                </div>
+            </div>
 
-      <div class="business-card _flex-box _flex-column-direction _align-items-unset">
-        <div class="business-logo secure-payment"></div>
-        <div class="business-header _f-15 _pt-5 _pb-5 _semi-bold">Zero Paperwork</div>
-        <div class="_f-15 business-font _regular">Get started instantly by submitting only your basic details & bank
-          statements</div>
-      </div>
+            <div class="business-card _flex-box _flex-column-direction _align-items-unset">
+                <div class="business-logo free-lancer "></div>
+                <div class="business-header _f-15 _pt-5 _pb-5 _semi-bold">Ace your business finances</div>
+                <div class="_f-15 business-font _regular">Manage banking, accounting & everything in between, on one platform
+                </div>
+            </div>
 
-      <div class="business-card _flex-box _flex-column-direction _align-items-unset">
-        <div class="business-logo free-lancer "></div>
-        <div class="business-header _f-15 _pt-5 _pb-5 _semi-bold">Ace your business finances</div>
-        <div class="_f-15 business-font _regular">Manage banking, accounting & everything in between, on one platform
+            <div class="business-card _flex-box _flex-column-direction _align-items-unset">
+                <div class="business-logo covid"></div>
+                <div class="business-header _f-15 _pt-5 _pb-5 _semi-bold">Loans to fight COVID-19</div>
+                <div class="_f-15 business-font _regular">Zero EMI for first 3 months on Back-to-Business loans of upto 1 lakh
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div class="business-card _flex-box _flex-column-direction _align-items-unset">
-        <div class="business-logo covid"></div>
-        <div class="business-header _f-15 _pt-5 _pb-5 _semi-bold">Loans to fight COVID-19</div>
-        <div class="_f-15 business-font _regular">Zero EMI for first 3 months on Back-to-Business loans of upto 1 lakh
+        <div class=" _ml-auto " style="width: 38%;">
+            <div class="text-container">
+                <div class="_pb-10">Boost your business <br> with Open</div>
+                <hr class="under-line gray-color-hr">
+            </div>
+            <div class="_f-22 _regular boost-text _w-50 _mt-20 ">
+                Get your hands on a term loan that’s crafted for your business
+            </div>
+
+            <button class="btn _f-18 open-acc-btn">Get an Open Account</button>
         </div>
-      </div>
     </div>
-
-    <div class="_w-50">
-      <div class="text-container">
-        <div class="_pb-10">Boost your business <br> with Open</div>
-        <hr class="under-line gray-color-hr">
-      </div>
-      <div class="_f-22 _regular boost-text _w-50 _p-20 ">
-        Get your hands on a term loan that’s crafted for your business
-      </div>
-
-      <button class="btn _f-18 open-acc-btn">Get an Open Account</button>
-    </div>
-  </div>
 
 </div>
